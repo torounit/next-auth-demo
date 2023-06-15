@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import Login from '@/src/components/Login';
+import LoginLogout from '@/components/LoginLogout';
 
 export const metadata: Metadata = {
   title: "HOME",
@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <main>
       <h1>Home</h1>
-      <Login />
+      <LoginLogout />
     </main>
   );
 }
