@@ -1,11 +1,13 @@
 import type { ComponentProps, ElementType } from "react";
+import React from 'react';
 
 
 type OwnProps<E extends ElementType> = {
   as?: E;
 };
 
-type Props<E extends ElementType> = OwnProps<E> & ComponentProps<E>;
+type Props<E extends ElementType> = OwnProps<E> &
+  Omit<ComponentProps<E>, keyof OwnProps<E>>;
 
 function Button<E extends ElementType = "button">({
   children,
